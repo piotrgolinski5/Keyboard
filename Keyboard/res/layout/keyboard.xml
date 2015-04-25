@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical" >
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#3f3f3f"
+        android:keyPreviewLayout="@layout/preview" />
+    <!--
+      android:background="@drawable/ic_launcher"
+        android:keyBackground="@drawable/key"
+    -->
+
+    <LinearLayout
+        android:id="@+id/rlEmaticons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/keyboard"
+        android:layout_alignParentBottom="true"
+        android:background="#3f3f3f"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/llTabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal" >
+
+           
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <Button
+            android:id="@+id/btnKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keyboard" />
+    </LinearLayout>
+
+</RelativeLayout>
